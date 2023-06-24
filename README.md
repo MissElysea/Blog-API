@@ -3,3 +3,5 @@
 ## TRELLO:
 
 https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
+
+## GETTING STARTED:
