@@ -1,6 +1,7 @@
 const Article = require('../models/article')
 const User = require('../models/user')
 
+// Create Article //
 
 exports.createArticle = async function (req, res) {
     try {
@@ -22,6 +23,8 @@ exports.createArticle = async function (req, res) {
     }
 }
 
+// Find Article //
+
 exports.findArticle = async function (req, res) {
     try {
         const article = await Article.findOne({ _id: req.params.id })
@@ -31,6 +34,8 @@ exports.findArticle = async function (req, res) {
     }
 }
 
+// Update Article //
+
 exports.updateArticle = async function (req, res) {
     try {
         const updatedArticle = await Article.findOneAndUpdate ({ _id: req.params.id, user: req.user._id }, req.body, { new: true })
@@ -39,6 +44,8 @@ exports.updateArticle = async function (req, res) {
         res.status(400).json({ message: error.message })
     }
 }
+
+// Delete Article //
 
 exports.deleteArticle = async function (req, res) {
     try {

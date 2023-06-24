@@ -18,6 +18,8 @@ exports.auth = async (req, res, next) => {
     }
 }
 
+// Create User //
+
 exports.createUser = async (req, res) => {
     try {
         const user = new User(req.body)
@@ -28,6 +30,8 @@ exports.createUser = async (req, res) => {
         res.status(400).json({ message: error.message})
     }
 }
+
+// Login User //
 
 exports.loginUser = async (req, res) => {
     try {
@@ -43,6 +47,8 @@ exports.loginUser = async (req, res) => {
     }
 }
 
+// Update User //
+
 exports.updateUser = async (req, res) => {
     try {
         const updates = object.keys(req.body)
@@ -53,6 +59,8 @@ exports.updateUser = async (req, res) => {
         res.status(400).json({ message: error.message })
     }
 }
+
+// Delete User //
 
 exports.deleteUser = async (req, res) => {
     try {
