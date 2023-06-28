@@ -16,5 +16,20 @@ cd Blog-API
 
 3. Install the required dependencies by running the following command:
 
-npm install 
+npm install dotenv mongoose express jsonwebtoken bcrypt morgan
+
+## GLOBAL INSTALLATION:
+
+1. Node.js: Install Node.js from the official website (https://nodejs.org). Follow the installation instructions for your operating system.
+
+## CONFIGURATION:
+
+Before running the app, you need to set up the required configuration files.
+
+1. Create a .env file in the root directory of the project.
+
+2. Open the .env file and add the following:
+
+MONGO_URI=<your-mongodb-uri>
+SECRET=<your-secret-key>
 
