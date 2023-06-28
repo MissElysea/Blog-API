@@ -30,6 +30,6 @@ Before running the app, you need to set up the required configuration files.
 
 2. Open the .env file and add the following:
 
-MONGO_URI=<your-mongodb-uri>
-SECRET=<your-secret-key>
+MONGO_URI=(your-mongodb-uri)
+SECRET=(your-secret-key)
 
