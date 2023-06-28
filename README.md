@@ -34,3 +34,7 @@ MONGO_URI=(your-mongodb-uri)
 <br>
 SECRET=(your-secret-key)
 
+Replace (your-mongodb-uri) with the MongoDB connection string for your local or remote database.
+
+Replace (your-secret-key) with a secret key for JWT token generation.
+
