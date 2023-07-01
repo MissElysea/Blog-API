@@ -38,3 +38,18 @@ Replace (your-mongodb-uri) with the MongoDB connection string for your local or 
 
 Replace (your-secret-key) with a secret key for JWT token generation.
 
+## START THE APP IN DEVELOPMENT MODE
+
+1. In the project's root directory run the following command:
+
+npm run dev
+
+The app will start running, and you will see a message indicating the server is listening on a specific port (e.g., The server is listening on port 3000!).
+
+## MAKING API REQUESTS USING POSTMAN
+
+1. Open Postman on your local machine.
+2. Set the request method (POST, GET, PUT, DELETE) and enter the request URL.
+3. For routes that require authentication, go to the authorization tab, change the type to Bearer Token, and paste the token.
+4. Configure the request body, providing the required paramters and values.
+5. Send the request and observe the response from the server.
