@@ -7,9 +7,7 @@ const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    Article: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Article'}]
-}, {
-    timestamps: true
+    article: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Article'}]
 })
 
 userSchema.pre('save', async function(next) {

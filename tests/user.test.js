@@ -19,11 +19,14 @@ afterAll(async () => {
 
 afterAll((done) => done())
 
-describe('Test the users endpoints', () => {
-  test('It should create a new user', async () => {
+describe('Testing The User Endpoints', () => {
+  test('You can SUCESSFULLY create a new user!', async () => {
     const response = await request(app)
       .post('/user')
-      .send({ name: 'Beyonce Knowles', email: 'beyonce@example.com', password: 'password123' })
+      .send({ 
+      name: 'Beyonce Knowles', 
+      email: 'beyonce@example.com', 
+      password: 'password123' })
     
     expect(response.statusCode).toBe(200)
     expect(response.body.user.name).toEqual('Beyonce Knowles')
@@ -31,13 +34,18 @@ describe('Test the users endpoints', () => {
     expect(response.body).toHaveProperty('token')
   })
 
-  test('It should login a user', async () => {
-    const user = new User({ name: 'Beyonce Knowles', email: 'beyonce@gmail.com', password: 'password123' })
+  test('You can SUCESSFULLY login a user!', async () => {
+    const user = new User({ 
+    name: 'Beyonce Knowles', 
+    email: 'beyonce@gmail.com', 
+    password: 'password123' })
     await user.save()
 
     const response = await request(app)
       .post('/user/login')
-      .send({ email: 'beyonce@gmail.com', password: 'password123' })
+      .send({ 
+      email: 'beyonce@gmail.com', 
+      password: 'password123' })
     
     expect(response.statusCode).toBe(200)
     expect(response.body.user.name).toEqual('Beyonce Knowles')
@@ -45,23 +53,31 @@ describe('Test the users endpoints', () => {
     expect(response.body).toHaveProperty('token')
   })
 
-  test('It should update a user', async () => {
-    const user = new User({ name: 'Rihanna Fenty', email: 'rih@example.com', password: 'password123' })
+  test('You can SUCESSFULLY update a user!', async () => {
+    const user = new User({ 
+    name: 'Rihanna Fenty', 
+    email: 'rih@example.com', 
+    password: 'password123' })
     await user.save()
     const token = await user.generateAuthToken()
 
     const response = await request(app)
       .put(`/user/${user._id}`)
       .set('Authorization', `Bearer ${token}`)
-      .send({ name: 'Rihanna Fenty', email: 'rih@example.com' })
+      .send({ 
+        name: 'Rihanna Fenty', 
+        email: 'rih@example.com' })
     
     expect(response.statusCode).toBe(200)
     expect(response.body.name).toEqual('Rihanna Fenty')
     expect(response.body.email).toEqual('rih@example.com')
   })
 
-  test('It should delete a user', async () => {
-    const user = new User({ name: 'Beyonce Knowles', email: 'beyonce@yahoo.com', password: 'password123' })
+  test('You can SUCESSFULLY delete a user!', async () => {
+    const user = new User({ 
+      name: 'Beyonce Knowles', 
+      email: 'beyonce@yahoo.com', 
+      password: 'password123' })
     await user.save()
     const token = await user.generateAuthToken()
 

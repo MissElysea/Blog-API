@@ -3,32 +3,30 @@ const User = require('../models/user')
 
 // Create Article //
 
-exports.createArticle = async function (req, res) {
+exports.createArticle = async (req, res) => {
     try {
-        const userId = req.user._id
-        req.body.user = userId
-        const article = await Article.create(req.body)
-        
-        if (userId) {
-            const user = await User.findById(userId)
-         if (user) {
-            user.article ? user.article.addToSet(article._id) : (user.article = [article._id])
-            await user.save()
-        }
-    }
-        
-        res.json(article)
+        const article = new Article({
+            title: req.body.title,
+            description: req.body.description,
+            user: req.user._id
+        })
+        await article.save();
+        const token = await req.user.generateAuthToken()
+        res.status(200).json({ article, token });
     } catch (error) {
         res.status(400).json({ message: error.message })
     }
-}
+};
 
 // Find Article //
 
 exports.findArticle = async function (req, res) {
     try {
         const article = await Article.findOne({ _id: req.params.id })
-        res.json(article)
+        if (!article) {
+            throw new Error('Article Not Found')
+        }
+        res.json({ article }) 
     } catch (error) {
         res.status(400).json({ message: error.message })
     }
@@ -36,23 +34,35 @@ exports.findArticle = async function (req, res) {
 
 // Update Article //
 
-exports.updateArticle = async function (req, res) {
+exports.updateArticle = async (req, res) => {
     try {
-        const updatedArticle = await Article.findOneAndUpdate ({ _id: req.params.id, user: req.user._id }, req.body, { new: true })
-        res.json(updatedArticle)
+        const article = await Article.findOneAndUpdate (
+            { _id: req.params.id, user: req.user._id }, 
+            req.body, 
+            { new: true }
+            );
+            if (!article) {
+                throw new Error('Article Not Found');
+            }
+            res.status(200).json(article);
     } catch (error) {
-        res.status(400).json({ message: error.message })
+        res.status(400).json({ message: error.message });
     }
-}
-
+};
+     
 // Delete Article //
 
-exports.deleteArticle = async function (req, res) {
+exports.deleteArticle = async (req, res) => {
     try {
-        await Article.findOneAndDelete({ _id: req.params.id, user: req.user._id })
-        res.json({ message: 'Article Deleted Successfully' })
-    } catch (error) {
-        res.status(400).json({ message: error.message })
-    }
-}
-
+        const article = await Article.findOneAndDelete({
+            _id: req.params.id,
+            user: req.user._id
+          });
+          if (!article) {
+            throw new Error('Article not found');
+          }
+          res.status(200).json({ message: 'Article Deleted Successfully' });
+        } catch (error) {
+          res.status(400).json({ message: error.message });
+        }
+      };

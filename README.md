@@ -16,7 +16,7 @@ cd Blog-API
 
 3. Install the required dependencies by running the following command:
 
-npm install dotenv mongoose express jsonwebtoken bcrypt morgan
+npm install 
 
 ## GLOBAL INSTALLATION:
 

@@ -4,11 +4,10 @@ const articleSchema = new Schema ({
     title: { type: String, required: true },
     description: { type: String },
     user: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
-    createdAt: { type: Date, default: Date.now }
-}, {
-    timestamps: true
-})
+},
+   { timestamps: true }
+);
 
-const Article = model('Article', articleSchema)
+const article = model('article', articleSchema)
 
-module.exports = Article
+module.exports = article
