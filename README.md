@@ -61,7 +61,7 @@ The app will start running, and you will see a message indicating the server is 
 
 1. Ensure that you have completed the installation and configuration steps mentioned above.
 2. In the root directory, run the following command:
-npm test
+```npm run test```
 3. The tests will be executed, and the results will be displayed in the console.
 
 ## STARTING THE APP WITHOUT DEVELOPMENT MODE
