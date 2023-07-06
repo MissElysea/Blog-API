@@ -1,5 +1,7 @@
 # Unspoken Thoughts Blog API
 
+![Logo](images/Unspoken_Thoughts_Blog.png)
+
 ## TRELLO:
 
 https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
