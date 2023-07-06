@@ -24,6 +24,7 @@ https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
 mkdir directory-example
 ```
 <br>
+
 ```
 cd directory-example
 ```
