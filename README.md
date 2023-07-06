@@ -10,7 +10,8 @@ https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
 
 1. Clone the GitHub repository to your local machine using the following command:
 
-```git clone https://github.com/MissElysea/Blog-API.git```
+```git clone https://github.com/MissElysea/Blog-API.git
+```
 
 2. Naviagte to the project's root directory.
 
@@ -18,7 +19,8 @@ cd Blog-API
 
 3. Install the required dependencies by running the following command:
 
-npm install 
+```npm install
+```
 
 ## GLOBAL INSTALLATION:
 
@@ -45,7 +47,8 @@ Replace (your-secret-key) with a secret key for JWT token generation.
 
 1. In the project's root directory run the following command:
 
-```npm run dev```
+```npm run dev
+```
 
 The app will start running, and you will see a message indicating the server is listening on a specific port (e.g., The server is listening on port 3000!).
 
@@ -81,6 +84,7 @@ mongoose.connection.once('open', () => console.log('MongoDB is connected!'));
 4. Open the terminal and navigate to the project's root directory.
 5. Run the following command to start the app:
 
-```node start.js```
+```node start.js
+```
 
 6. The app will start running, and you will see a message showing that the server is listening on a specific port (i.e., 'The server is listening on port 3000!').
