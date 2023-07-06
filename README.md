@@ -1,4 +1,6 @@
-![Logo](images/Unspoken_Thoughts_Blog.png)
+<p align="center">
+<img src="images/Unspoken_Thoughts_Blog.png" alt="logo">
+</p>
 
 ## TRELLO:
 

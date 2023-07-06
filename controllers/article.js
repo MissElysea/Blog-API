@@ -20,7 +20,7 @@ exports.createArticle = async (req, res) => {
 
 // Find Article //
 
-exports.findArticle = async function (req, res) {
+exports.findArticle = async (req, res) => {
     try {
         const article = await Article.findOne({ _id: req.params.id })
         if (!article) {
