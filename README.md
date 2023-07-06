@@ -6,52 +6,70 @@
 
 https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
 
+## GLOBAL INSTALLATION:
+
+1. Node.js: Install Node.js by visiting the official website at https://nodejs.org. Follow the provided installation instructions that are specific to your operating system.
+
+2. VSCode: Download VSCode from the official website at https://code.visualstudio.com. Follow the installation instructions provided for your operating system to complete the installation.
+
+3. MongoDB: Create a MongoDB account by visiting the official website at https://account.mongodb.com/account/register?signedOut=true.
+
+4. Postman: Download Postman from the official website at https://www.postman.com. Follow the installation instructions provided for your operating system to install Postman.
+
 ## INSTALLATION:
 
-1. Clone the GitHub repository to your local machine using the following command:
+1. Create a new directory on your local machine and navigate to that directory using the following commands:
+
+```mkdir directory-example```
+```cd directory-example```
+
+2. Clone the GitHub repository to your local machine using the following command:
 
 ```git clone https://github.com/MissElysea/Blog-API.git```
 
-2. Navigate to the project's root directory.
+3. Open Visual Studio Code (VSCode) by running the following command:
 
-```cd Blog-API```
+```code .```
 
-3. Install the required dependencies by running the following command:
+4. In the VSCode editor, open the integrated terminal. Then, install the necessary dependencies by running the following command:
 
 ```npm install```
-
-## GLOBAL INSTALLATION:
-
-1. Node.js: Install Node.js from the official website (https://nodejs.org). Follow the installation instructions for your operating system.
 
 ## CONFIGURATION:
 
 Before running the app, you need to set up the required configuration files.
 
-1. Create a .env file in the root directory of the project.
+1. Create a file named .env in the root directory of the project.
 
-2. Open the .env file and add the following:
+```touch .env```
+
+2. Open the .env file and add the following information:
 
 ```
 MONGO_URI=(your-mongodb-uri)
 SECRET=(your-secret-key)
 ```
 
-Replace (your-mongodb-uri) with the MongoDB connection string for your local or remote database.
+Replace (your-mongodb-uri) with the MongoDB connection string specific to your local or remote database.
 
-Replace (your-secret-key) with a secret key for JWT token generation.
+For (your-secret-key), generate a secret JWT token generation. You can use an online SHA256 hashing tool, such as the one available at (https://emn178.github.io/online-tools/sha256.html), to generate the secret key.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%2010.31.58%20AM.png>
+</p>
 
 ## START THE APP IN DEVELOPMENT MODE
 
-1. In the project's root directory run the following command:
+1. In the integrated terminal run the following command:
 
 ```npm run dev```
 
-The app will start running, and you will see a message indicating the server is listening on a specific port (e.g., The server is listening on port 3000!).
+The app will start running, and you will see a message indicating the server is listening on a specific port and that the MongoDB database is connected. 
+
+```The server is listening on port 3000!
+MongoDB is connected!```
 
 ## MAKING API REQUESTS USING POSTMAN
-
-Download and open Postman on your local machine.
 
 ### HOW TO CREATE A USER
 
