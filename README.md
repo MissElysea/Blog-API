@@ -31,7 +31,6 @@ Before running the app, you need to set up the required configuration files.
 2. Open the .env file and add the following:
 
 ```MONGO_URI=(your-mongodb-uri)
-<br>
 SECRET=(your-secret-key)
 ```
 
@@ -78,5 +77,7 @@ mongoose.connection.once('open', () => console.log('MongoDB is connected!'));
 3. Save the start.js file.
 4. Open the terminal and navigate to the project's root directory.
 5. Run the following command to start the app:
+
 ```node start.js```
+
 6. The app will start running, and you will see a message showing that the server is listening on a specific port (i.e., 'The server is listening on port 3000!').
