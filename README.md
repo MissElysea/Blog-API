@@ -12,9 +12,9 @@ https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
 
 ```git clone https://github.com/MissElysea/Blog-API.git```
 
-2. Naviagte to the project's root directory.
+2. Navigate to the project's root directory.
 
-cd Blog-API
+```cd Blog-API```
 
 3. Install the required dependencies by running the following command:
 
@@ -51,11 +51,81 @@ The app will start running, and you will see a message indicating the server is 
 
 ## MAKING API REQUESTS USING POSTMAN
 
-1. Open Postman on your local machine.
-2. Set the request method (POST, GET, PUT, DELETE) and enter the request URL.
-3. For routes that require authentication, go to the authorization tab, change the type to Bearer Token, and paste the token.
-4. Configure the request body, providing the required paramters and values.
-5. Send the request and observe the response from the server.
+Download and open Postman on your local machine.
+
+### HOW TO CREATE A USER
+
+To make the request, set the method to "POST" and use the URL "http://localhost:3000/user". In the body tab, select the "Raw" option and choose JSON format. Then, add the necessary information to match the user mongoose schema.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%208.14.20%20AM.png">
+</p>
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%208.18.25%20AM.png">
+</p>
+
+### HOW TO LOGIN A USER 
+
+To make the request, change the method to "POST" and use the URL "http://localhost:3000/user/login". Copy the token and the user ID for updating the user's information. The same user ID will also be used for creating an article.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%208.23.53%20AM.png">
+</p>
+
+### HOW TO UPDATE A USER AND USE A TOKEN FOR AUTHORIZATION
+
+To make the request, change the method to "PUT" and use the URL "http://localhost:3000/user/[id]". Replace "[id]" in the URL with the specific user ID you want to update.
+
+To include the token for authentication, go to the "Auth" tab in Postman. Under the "Type" dropdown, select "Bearer Token". Then, paste the token you obtained from the server into the designated field.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%208.31.56%20AM.png">
+</p>
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%208.33.00%20AM.png">
+</p>
+
+### HOW TO CREATE AN ARTICLE 
+
+To make the request, change the method to "POST" and use the URL "http://localhost:3000/article". Then, add the necessary information to match the article mongoose schema.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%208.44.52%20AM.png">
+</p>
+
+Copy the article id for finding, updating, and deleting an article.
+
+### HOW TO FIND AN ARTICLE
+
+To make the request, change the method to "GET" and use the URL "http://localhost:3000/article/[id]". Replace "[id]" in the URL with the specific article ID you want to find.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%208.50.40%20AM.png">
+</p>
+
+### HOW TO UPDATE AN ARTICLE
+
+To make the request, change the method to "PUT" and use the URL "http://localhost:3000/article/[id]". Replace "[id]" in the URL with the specific article ID you want to update.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%209.03.45%20AM.png">
+</p>
+
+### HOW TO DELETE AN ARTICLE
+
+To make the request, change the method to "DELETE" and use the URL "http://localhost:3000/article/[id]". Replace "[id]" in the URL with the specific article ID you want to delete.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%209.06.21%20AM.png">
+</p>
+
+### HOW TO DELETE A USER
+
+To make the request, change the method to "DELETE" and use the URL "http://localhost:3000/article/[id]". Replace "[id]" in the URL with the specific user ID you want to delete.
+
+<p align="center">
+<img src="images/Screenshot%202023-07-06%20at%209.09.50%20AM.png">
+</p>
 
 ## RUNNING TESTS
 
