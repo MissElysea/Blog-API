@@ -68,7 +68,8 @@ For (your-secret-key), generate a secret JWT token generation. You can use an on
 The app will start running, and you will see a message indicating the server is listening on a specific port and that the MongoDB database is connected. 
 
 ```The server is listening on port 3000!
-MongoDB is connected!```
+MongoDB is connected!
+```
 
 ## MAKING API REQUESTS USING POSTMAN
 
