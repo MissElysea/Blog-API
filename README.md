@@ -166,15 +166,20 @@ To make the request, change the method to "DELETE" and use the URL "http://local
 
 1. Ensure that you have completed the installation and configuration steps mentioned above.
 
-2. In the root directory, run the following command:
+2. In a new integrated terminal, since you cannot run tests and the server in the same terminal, run the following command:
+
 ```
 npm run test
 ```
-3. The tests will be executed, and the results will be displayed in the console.
+3. The tests will be executed, and the results will be displayed in the terminal.
 
 ## STARTING THE APP WITHOUT DEVELOPMENT MODE
 
 1. In the project's root directory, create a JavaScript file (i.e., start.js).
+
+```
+start.js
+```
 
 2. Open the start.js file and add the following code:
 
@@ -197,4 +202,10 @@ mongoose.connection.once('open', () => console.log('MongoDB is connected!'));
 node start.js
 ```
 
-6. The app will start running, and you will see a message showing that the server is listening on a specific port (i.e., 'The server is listening on port 3000!').
+6. The app will start running, and you will see a message showing that the server is listening on a specific port and connected to the MongoDB database.
+
+```
+The server is listening on port 3000!
+MongoDB is connected!
+```
+
