@@ -21,6 +21,7 @@ https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
 1. Create a new directory on your local machine and navigate to that directory using the following commands:
 
 ```mkdir directory-example```
+<br>
 ```cd directory-example```
 
 2. Clone the GitHub repository to your local machine using the following command:
@@ -39,7 +40,7 @@ https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
 
 Before running the app, you need to set up the required configuration files.
 
-1. Create a file named .env in the root directory of the project.
+1. Create a file named .env in the root directory of the project by running the following command in the integrated terminal.
 
 ```touch .env```
 
@@ -55,7 +56,7 @@ Replace (your-mongodb-uri) with the MongoDB connection string specific to your l
 For (your-secret-key), generate a secret JWT token generation. You can use an online SHA256 hashing tool, such as the one available at (https://emn178.github.io/online-tools/sha256.html), to generate the secret key.
 
 <p align="center">
-<img src="images/Screenshot%202023-07-06%20at%2010.31.58%20AM.png>
+<img src="images/Screenshot%202023-07-06%20at%2010.31.58%20AM.png">
 </p>
 
 ## START THE APP IN DEVELOPMENT MODE
