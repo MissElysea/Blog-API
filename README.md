@@ -20,21 +20,31 @@ https://trello.com/b/D76U8Yo2/unspoken-thoughts-blog
 
 1. Create a new directory on your local machine and navigate to that directory using the following commands:
 
-```mkdir directory-example```
+```
+mkdir directory-example
+```
 <br>
-```cd directory-example```
+```
+cd directory-example
+```
 
 2. Clone the GitHub repository to your local machine using the following command:
 
-```git clone https://github.com/MissElysea/Blog-API.git```
+```
+git clone https://github.com/MissElysea/Blog-API.git
+```
 
 3. Open Visual Studio Code (VSCode) by running the following command:
 
-```code .```
+```
+code .
+```
 
 4. In the VSCode editor, open the integrated terminal. Then, install the necessary dependencies by running the following command:
 
-```npm install```
+```
+npm install
+```
 
 ## CONFIGURATION:
 
@@ -42,7 +52,9 @@ Before running the app, you need to set up the required configuration files.
 
 1. Create a file named .env in the root directory of the project by running the following command in the integrated terminal.
 
-```touch .env```
+```
+touch .env
+```
 
 2. Open the .env file and add the following information:
 
@@ -63,7 +75,9 @@ For (your-secret-key), generate a secret JWT token generation. You can use an on
 
 1. In the integrated terminal run the following command:
 
-```npm run dev```
+```
+npm run dev
+```
 
 The app will start running, and you will see a message indicating the server is listening on a specific port and that the MongoDB database is connected. 
 
@@ -151,16 +165,21 @@ To make the request, change the method to "DELETE" and use the URL "http://local
 ## RUNNING TESTS
 
 1. Ensure that you have completed the installation and configuration steps mentioned above.
+
 2. In the root directory, run the following command:
-```npm run test```
+```
+npm run test
+```
 3. The tests will be executed, and the results will be displayed in the console.
 
 ## STARTING THE APP WITHOUT DEVELOPMENT MODE
 
 1. In the project's root directory, create a JavaScript file (i.e., start.js).
+
 2. Open the start.js file and add the following code:
 
-```require('dotenv').config();
+```
+require('dotenv').config();
 const app = require('./app');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3000;
@@ -169,9 +188,13 @@ mongoose.connection.once('open', () => console.log('MongoDB is connected!'));
 ```
 
 3. Save the start.js file.
+
 4. Open the terminal and navigate to the project's root directory.
+
 5. Run the following command to start the app:
 
-```node start.js```
+```
+node start.js
+```
 
 6. The app will start running, and you will see a message showing that the server is listening on a specific port (i.e., 'The server is listening on port 3000!').
