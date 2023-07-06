@@ -1,5 +1,3 @@
-# Unspoken Thoughts Blog API
-
 ![Logo](images/Unspoken_Thoughts_Blog.png)
 
 ## TRELLO:
